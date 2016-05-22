@@ -26,6 +26,28 @@
 			<button ng-click="redraw()">
 				New Draw
 			</button>
+
+			<p>
+				Investment:
+				<input ng-model="investment" />
+				$
+
+				<button ng-click="play()">
+					Play
+				</button>
+			</p>
+
+			<table>
+				<tr>
+					<th>Investment</th><th>Play</th><th>Losses</th><th>Earning</th>
+				</tr>
+				<tr>
+					<td>{{investment | currency : "$":0}} </td>
+					<td>{{investment / 2}}</td>
+					<td>{{earning - investment | currency : "$":0}}</td>
+					<td>{{earning | currency : "$":0}}</td>
+				<tr>
+			</table>
 		</div>
 	</body>
 </html>
