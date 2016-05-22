@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<title>PowerBall</title>
+	<script src="./angular.min.js"></script>
+	<script src="powerball.js"></script>
+	<script src="powerballController.js"></script>
+	<link rel="stylesheet" type="text/css" href="powerball.css">
+	<body>
+		See how you can get money by playing the Powerbaal
+		<!--
+		Choose your number
+
+		or automatic draw
+
+		money you want to invest
+
+		number if draw
+
+		get the gains
+		-->
+		<div ng-app="powerBall" ng-controller="newDrawCtrl" data-ng-init="redraw()">
+			<p>
+				<span class="whiteball" ng-repeat="ball in whiteBalls">{{ ball }}</span>
+				<span class="powerball">{{ powerBall }}</span>
+			</p>
+			<button ng-click="redraw()">
+				New Draw
+			</button>
+		</div>
+	</body>
+</html>
