@@ -76,6 +76,7 @@ var matchPrize = {
 			wbMatch : wbMatch,
 			pbMatch : pbMatch,
 			matcheTypes : this.matcheTypes,
+			key : "" + wbMatch + pbMatch,
 
 			completelyLost : function() {
 				return this.wbMatch <= 2 && pbMatch == 0;
@@ -89,7 +90,7 @@ var matchPrize = {
 			},
 
 			getKey : function() {
-				return "" + this.wbMatch + this.pbMatch;
+				return this.key;
 			}
 		};
 	},

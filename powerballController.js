@@ -8,7 +8,7 @@ angular.module('powerBall', []).controller('newDrawCtrl', function($scope) {
 		
 		var total = 0;
 		var count = {};
-		for(var i = 0; i < 10000; i++) {
+		for(var i = 0; i < 1000000; i++) {
 			var ticket = powerBallLottery.getNewDraw();
 			var result = matchPrize.getResult(draw, ticket);
 			var prize = result.getPrize();
@@ -19,7 +19,7 @@ angular.module('powerBall', []).controller('newDrawCtrl', function($scope) {
 			current = (current === undefined) ? 0 : current;
 			count[key] = current + 1;
 		}
-		
+
 		console.log("total: " + total + "$ count: " + JSON.stringify(count));
 	};
 	
