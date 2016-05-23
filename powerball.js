@@ -57,6 +57,9 @@ var powerBallLottery = {
 var matchPrize = {
 
 	matcheTypes : {
+		"00" : 0,
+		"10" : 0,
+		"20" : 0,
 		"01" : 4,
 		"11" : 4,
 		"21" : 7,

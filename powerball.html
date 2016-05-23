@@ -37,7 +37,7 @@
 				</button>
 			</p>
 
-			<table>
+			<table class="result">
 				<tr>
 					<th>Investment</th><th>Play</th><th>Losses</th><th>Earning</th>
 				</tr>
@@ -47,6 +47,20 @@
 					<td>{{earning - investment | currency : "$":0}}</td>
 					<td>{{earning | currency : "$":0}}</td>
 				<tr>
+			</table>
+			<br/>
+			<table>
+				<tr>
+					<th>Whites</th><th>PBall</th><th>Prize</th><th>Matches</th><th>Total</th>
+				</tr>
+				<tr ng-repeat="x in matchPrize | orderBy : '-key'">
+					<td>{{x.key[0]}}</td>
+					<td>{{x.key[1]}}</td>
+					<td>{{x.value | currency : "$":0}}</td>
+					<td>{{matches[x.key]}}</td>
+					<td>{{x.value * matches[x.key] | currency : "$":0}}</td>
+				</tr>
+				
 			</table>
 		</div>
 	</body>

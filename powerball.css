@@ -8,9 +8,13 @@ table {
     border-collapse: collapse;
 }
 
-table td, table th {
+table.result td, table.result  th {
 	min-width: 75px;
 	padding: 1em;
+	border:#000000 solid 1px
+}
+
+table td, table th {
 	border:#000000 solid 1px
 }
 
